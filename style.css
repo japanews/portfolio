@@ -1,0 +1,526 @@
+/* CSS 変数定義 */
+:root {
+    --primary-bg: #28293e;
+    --secondary-bg: #FDF0E9;
+    --primary-color: white;
+    --secondary-color: #391400;
+    --padding-default: 24px;
+    --padding-narrow: 12px;
+    --padding-footer: 24px;
+    --teritiart-color: #ef6d58
+}
+/* body リセット */
+body {
+    margin: 0px;
+}
+img {
+    width: 100%;
+}
+button {
+    padding: 12px 24px;
+    border-radius: 4px;
+    font-weight: bolder;
+}
+.txt-small-catch {
+    color: var(--teritiart-color);
+    margin-bottom: 24px;
+    font-size: 24px;
+}
+.tit-title {
+    font-size: 56px;
+    font-weight: 900;
+    margin-bottom: 12px;
+}
+p {
+    font-size: 16px;
+}
+
+/* header */
+header {
+    color: var(--primary-color);
+    background-color: var(--primary-bg);
+    padding: var(--padding-default);
+}
+#logo {
+    width: 195px;
+    line-height: 150%;
+}
+#menu {
+    margin-left: auto; /* メニューをロゴから離して左寄せ */
+    display: flex; /* メニューのリストを横並びに */
+  }
+#menubar {
+    display: flex;
+}
+#menu ul {
+    margin-left: auto; /* メニューをロゴから離して左寄せ */
+    list-style: none; /* デフォルトのリストマーカーを削除 */
+    margin: 0; /* ulの外側の余白をリセット */
+    padding: 0; /* ulの内側の余白をリセット */
+}
+#contact button{
+    display: none;
+}
+@media(min-width: 768px){
+    #menu ul {
+        display: flex;
+      }
+    #contact button {
+        display: block;
+    }
+}
+#menu ul li {
+    margin-left: 20px; /* 各メニュー間の間隔を設定 */
+}
+  
+#menu ul li a {
+    text-decoration: none; /* リンクの下線を削除 */
+    color: var(--primary-color); /* テキストの色 */
+    font-size: 16px; /* テキストサイズ */
+    font-weight: bold; /* テキストを太字に */
+}
+
+#header-catch-text button {
+    background-color: var(--teritiart-color);
+    color: var(--primary-color);
+}
+
+#header-catch-text .txt-small-catch {
+    font-size: 24px;
+}
+
+#header-catch-text .txt-title {
+    font-size: 56px;
+    font-weight: bold;
+}
+
+#header-catch-text p {
+    font-size: 16px;
+    line-height: 200%;
+}
+
+
+.txt-title2 {
+    font-size: 56px;
+    font-weight: bold;
+    text-align: center;
+}
+
+#header-catch-text .sub {
+    font-size: 16px;
+    line-height: 200%;
+    text-align: center;
+}
+
+/* main */
+main {
+}
+main  #main-about {
+    color: var(--secondary-color);
+    background-color: var(--secondary-bg);
+    padding: var(--padding-default);
+}
+
+main #main-about-text {
+    font-size: 56px;
+}
+
+main #main-about button {
+    color: var(--secondary-color);
+    padding: 12px 24px;
+}
+
+main #main-lastwork {
+    color: var(--primary-color);
+    background-color: var(--primary-bg);
+}
+main #main-lastwork-title {
+    padding: var(--padding-default);
+}
+main #main-lastwork-images {
+    background-color: var(--secondary-bg);
+    padding: var(--padding-narrow);
+    display: grid;
+    grid-template-columns: 1fr; /* 3列で均等に配置 */
+    gap: 10px; /* アイテム間のスペース */
+    width: 100vw; /* ビューポート幅いっぱい */
+    box-sizing: border-box; /* パディングを含めて幅を計算 */
+}
+@media(min-width:768px){
+    main #main-lastwork-images {
+        grid-template-columns: repeat(3, 1fr); /* 3列で均等に配置 */
+    }
+}
+
+main #main-lastwork-movies {
+    background-color: var(--secondary-bg);
+    padding: var(--padding-narrow);
+    display: grid;
+    grid-template-columns: 1fr; /* 3列で均等に配置 */
+    gap: 10px; /* アイテム間のスペース */
+    width: 100vw; /* ビューポート幅いっぱい */
+    box-sizing: border-box; /* パディングを含めて幅を計算 */
+}
+main #main-lastwork-html {
+    background-color: var(--secondary-bg);
+    display: flex;
+    justify-content: space-between;
+}
+.main-lastwork2 {
+    background-color: var(--secondary-bg);
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9のアスペクト比 */
+    height: 0;
+    overflow: hidden;
+}
+.main-lastwork3 {
+    width: 30%;
+    padding: 20px;
+    text-align: center;
+}
+@media(min-width:768px){
+    main #main-lastwork-movies {
+        grid-template-columns: repeat(3, 1fr); /* 3列で均等に配置 */
+    }
+}
+
+main #main-lastwork img {
+    width: 100%;
+    aspect-ratio: 1 / 1; /* 正方形を保つ */
+    object-fit: cover; /* 画像が枠いっぱいになる */
+}
+main #main-images{
+    display: flex;
+    flex-wrap: wrap;
+}
+main #main-images img{
+    width: 50%;
+}
+
+/* work-card */
+main .main-lastwork {
+    position: relative;
+}
+.work-genre, .work-title {
+    position: absolute;
+}
+.work-genre {
+    bottom: 60px;
+    left: 12px;
+    background-color: white;
+    color: var(--secondary-color);
+    font-size: 12px;
+    padding: 4px 24px;
+    border-radius: 24px;
+}
+.work-title {
+    bottom: 24px;
+    left: 12px;
+    font-weight: bold;
+}
+
+/* footer */
+footer {
+    padding-top: 40px;
+    color: var(--primary-color);
+    background-color: var(--primary-bg);
+    font-size: 12px;
+    padding-left: var(--padding-footer);
+    padding-right: var(--padding-footer);
+}
+footer hr {
+    border-color: rgba(255, 255, 255, 0.2);
+    margin-bottom: 24px;
+}
+#footer-title {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 24px;
+}
+.footer-menu {
+    margin: 36px;
+}
+.footer-menu-title {
+    color: var(--teritiart-color);
+    margin-bottom: 24px;
+}
+.footer-menu-item {
+    margin-bottom: 8px;
+}
+.footer-menu-item ul {
+    margin-bottom: 6px;
+}
+#footer-sns {
+    margin-bottom: 24px;
+}
+.sns-icon {
+    width: 24px;
+}
+#footer-title, #footer-menus, #footer-sns {
+    text-align: center;
+}
+#footer-sub {
+    text-align: center;
+    font-size: 9px;
+    padding-bottom: var(--padding-narrow);
+}
+
+@media(min-width: 768px){
+    #header-catch {
+        display: flex;
+        flex-direction: row-reverse ;
+        justify-content: space-around;
+    }
+}
+
+@media(min-width: 768px){
+    #main-about {
+        display: flex;
+    }
+    #main-about-image,#main-about-text{
+        padding: 10%;
+    }
+    #main-lastwork-images {
+        display: flex;
+        justify-content: space-between;
+    }
+    #main-lastwork{
+        flex-basis: 33%;
+    }
+    main #main-images{
+        flex-wrap: nowrap;
+        justify-content: space-between;
+    }
+    main #main-images img{
+        width: 16%;
+    }
+}
+
+@media(min-width: 768px){
+    #footer-main, #footer-menus {
+        display: flex;
+        justify-content: space-between;
+    }
+    #footer-main-about {
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+/* メニュー */
+header{
+    position: relative;
+}
+#menubar-mobile{
+    display: block;
+    position: absolute;
+    top: 0px;
+}
+
+ul {
+    list-style-type: none; /* 点を消す */
+    padding: 0;
+    margin: 0;
+    gap: 10px; /* アイテム間の隙間を作る */
+}
+
+li {
+    padding: 10px 20px; /* 余白をつける（オプション） */
+}
+#menu-icon {
+    display: none;
+}
+#menu-toggle {
+    display: none;
+}
+
+/* ハンバーガーメニュー */
+/* モバイル用デザイン */
+@media (max-width: 768px) {
+    /* メニュー非表示 */
+    #menu {
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      top: 60px;
+      right: 20px;
+      background-color: #fff;
+      padding: 10px;
+      box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    /* チェックボックスとアイコン */
+    #menu-toggle {
+        display: none;
+    }
+
+  #menu-icon {
+    display: block;
+    margin-left: auto; /* メニューをロゴから離して左寄せ */
+    font-size: 40px;
+    background: none; /* 背景を消す */
+    border: none; /* ボーダーを消す */
+  }
+
+  /* チェックボックスがオンになったときにメニューを表示 */
+  #menu-toggle:checked + #menu-icon + #menu {
+    display: flex;
+  }
+  #menu ul li {
+    margin: 10px 0;
+  }
+}
+
+
+
+
+/* ここから下がハンバーガーメニューに関するCSS */
+/* メニュー */
+header{
+    position: relative;
+}
+#menubar-mobile{
+    display: block;
+    position: absolute;
+    top: 0px;
+}
+
+/* ここから下がハンバーガーメニューに関するCSS */
+#menubar-mobile {
+    width: 100%;
+    display: flex;
+    flex-direction: row-reverse;
+}
+.nav {
+    margin-right: 40px;
+}
+/* チェックボックスを非表示にする */
+.drawer_hidden {
+    display: none;
+  }
+  
+  /* ハンバーガーアイコンの設置スペース */
+  .drawer_open {
+    display: flex;
+    height: 60px;
+    width: 60px;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 100;/* 重なり順を一番上にする */
+    cursor: pointer;
+  }
+  
+  /* ハンバーガーメニューのアイコン */
+  .drawer_open span,
+  .drawer_open span:before,
+  .drawer_open span:after {
+    content: '';
+    display: block;
+    height: 3px;
+    width: 25px;
+    border-radius: 3px;
+    background: white;
+    transition: 0.5s;
+    position: absolute;
+  }
+  
+  /* 三本線の一番上の棒の位置調整 */
+  .drawer_open span:before {
+    bottom: 8px;
+  }
+  
+  /* 三本線の一番下の棒の位置調整 */
+  .drawer_open span:after {
+    top: 8px;
+  }
+  
+  /* アイコンがクリックされたら真ん中の線を透明にする */
+  #drawer_input:checked ~ .drawer_open span {
+    background: rgba(255, 255, 255, 0);
+  }
+  
+  /* アイコンがクリックされたらアイコンが×印になように上下の線を回転 */
+  #drawer_input:checked ~ .drawer_open span::before {
+    bottom: 0;
+    transform: rotate(45deg);
+  }
+  
+  #drawer_input:checked ~ .drawer_open span::after {
+    top: 0;
+    transform: rotate(-45deg);
+  }
+    
+  /* メニューのデザイン*/
+  .nav_content {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 100%; /* メニューを画面の外に飛ばす */
+    z-index: 99;
+    background: var(--primary-bg);
+    color: var(--primary-color);
+    transition: .5s;
+  }
+  .nav_content a,
+  .nav_content a:link,
+  .nav_content a:hover,
+  .nav_content a:active {
+    color: var(--primary-color);
+    text-decoration: none;
+  }
+  
+  /* メニュー黒ポチを消す */
+  .nav_list {
+    list-style: none;
+  }
+  
+  /* アイコンがクリックされたらメニューを表示 */
+  #drawer_input:checked ~ .nav_content {
+    left: 0;/* メニューを画面に入れる */
+  }
+
+  @media(min-width: 768px){
+    #menubar-mobile{
+        display: none;
+    }
+}
+
+/* Contactページ */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+  }
+  .container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  }
+  h1 {
+    text-align: center;
+    color: #333;
+  }
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+  label {
+    margin: 10px 0 5px;
+    color: #555;
+  }
+  input, textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+  }
+  .contact-info {
+    margin-top: 20px;
+    color: #333;
+  }
