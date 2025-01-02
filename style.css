@@ -112,6 +112,18 @@ header {
     text-align: center;
 }
 
+#header-catch-img {
+    width: 300px;
+}
+
+@media (max-width: 768px) {
+    #header-catch-img {
+      width: 90%;     /* 画面幅の90% */
+      max-width: 100%; /* 画像がはみ出さないように */
+      height: auto;   /* 縦横比を維持 */
+      margin: 0 auto; /* スマホでも中央揃え */
+    }
+}
 /* main */
 main {
 }
