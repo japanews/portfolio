@@ -1,13 +1,13 @@
 /* CSS 変数定義 */
 :root {
-    --primary-bg: #28293e;
-    --secondary-bg: #FDF0E9;
+    --primary-bg: #c8bba8;
+    --secondary-bg: #ffffff;
     --primary-color: white;
     --secondary-color: #391400;
     --padding-default: 24px;
     --padding-narrow: 12px;
     --padding-footer: 24px;
-    --teritiart-color: #ef6d58
+    --teritiart-color: #9b2d20
 }
 /* body リセット */
 body {
