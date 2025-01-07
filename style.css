@@ -536,3 +536,8 @@ body {
     margin-top: 20px;
     color: #333;
   }
+
+  a:visited {
+    color: inherit; /* リンクの色を通常と同じにする */
+    text-decoration: none; /* 下線などの装飾も統一 */
+  }
