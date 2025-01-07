@@ -125,8 +125,6 @@ header {
     }
 }
 /* main */
-main {
-}
 main  #main-about {
     color: var(--secondary-color);
     background-color: var(--secondary-bg);
@@ -537,7 +535,7 @@ body {
     color: #333;
   }
 
-  
+
   a:visited {
     color: inherit; /* リンクの色を通常と同じにする */
     text-decoration: none; /* 下線などの装飾も統一 */
